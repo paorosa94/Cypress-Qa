@@ -5,6 +5,7 @@
 import { SpaceCheckoutPage } from '@pages/SpaceCheckout.Page';
 import { SpaceLoginPage } from '@pages/SpaceLogin.Page';
 import { SpaceDestinationPage } from '@pages/SpaceProduct.Page';
+import { Auto } from '@/AutoComplete.Page';
 import 'cypress-file-upload';
 
 beforeEach(() => {
@@ -19,24 +20,28 @@ Cypress.Commands.add('page', () => {
 		spaceLoginPage: new SpaceLoginPage(),
 		spaceProductPage: new SpaceDestinationPage(),
 		spaceCheckoutPage: new SpaceCheckoutPage(),
+		 auto : new Auto()
 	};
 	return cy.wrap(page);
 });
 
-Cypress.Commands.add('react', (dataReactToolbox: string, options?: { hasText: string }) => {
+Cypress.Commands.add('react', (dataReactToolbox, hasText ) => {
 	const selector = `[data-react-toolbox=${dataReactToolbox}]`;
 	if (options?.hasText) {
-		cy.contains(selector, options.hasText);
+		cy.contains(selector, hasText);
 	} else {
 		cy.get(selector);
 	}
 });
-
-// Cypress.Commands.add('get AutoCompleted', () => {
+// Cypress.Commands.add('getAutoCompleted', () => {
 // 	const autoCompleted = [];
-// 	cy.get('[class$="auto-complete__multi-value__label"]').each(element => {
-// 		autoCompleted.push(element.text());
-// 	}).then(() => {
+// 	return cy.get('[class$="auto-complete__multi-value__label"]')
+// 		.each(element => {
+// 			autoCompleted.push(element.text());
+// 		})
+// 		.then(() => {
+// 			// return es útil cuando deseas retornar algo específico de ese bloque para usarlo fuera del mismo.
+// 			return autoCompleted; //Esto es útil cuando quieres usar el resultado de una operación asíncrona en otro lugar del código.
 
-// 	});
+// 		});
 // });

@@ -8,7 +8,7 @@ describe('challengue Elements',() => {
 
 	// Test case
 	it('TC1: should opload a file and download it', () => {
-		//se invoka el atrubuto su valor se guardara en la variable name
+		//se invoka el atrubuto su valor se guardara en la variable name con el fin si cambian  el valor la prueba no falle 
 		cy.get('#downloadButton')
 			.invoke('attr','download')
 			.then(name => {

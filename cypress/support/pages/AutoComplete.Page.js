@@ -4,6 +4,8 @@ class Auto {
 
 		getlength: () => cy.get('[class$="auto-complete__multi-value__label"]')
 	};
+
+	//dentro de esta array quiero asegurarme lo que tipie
 	iterarArray() {
 		const autoCompleted = [];
 		// el get es el nombre del constructor y getlength el nombre del elemento agarrable

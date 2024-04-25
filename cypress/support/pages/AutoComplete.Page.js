@@ -1,4 +1,4 @@
-export class Auto {
+class Auto {
 // constructor que se obtiene para iterar en funciones
 	get={
 
@@ -18,3 +18,4 @@ export class Auto {
 			});
 	}
 }
+export const auto = new Auto();

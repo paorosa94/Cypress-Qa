@@ -5,7 +5,7 @@
 import { SpaceCheckoutPage } from '@pages/SpaceCheckout.Page';
 import { SpaceLoginPage } from '@pages/SpaceLogin.Page';
 import { SpaceDestinationPage } from '@pages/SpaceProduct.Page';
-import { Auto } from '@/AutoComplete.Page';
+import { Auto } from '@pages/AutoComplete.Page';
 import 'cypress-file-upload';
 
 beforeEach(() => {

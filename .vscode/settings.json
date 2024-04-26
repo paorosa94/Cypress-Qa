@@ -97,5 +97,5 @@
 	"[github-actions-workflow]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
-	"cSpell.words": ["acciones", "prueba"]
+	"cSpell.words": ["acciones", "dynamicproperties", "prueba"]
 }

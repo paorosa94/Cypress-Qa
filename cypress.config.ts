@@ -43,7 +43,8 @@ export default defineConfig({
 	},
 	env: {
 		endpoint:{
-			dynamicProperties:'/dynamic-properties'
+			dynamicProperties:'/dynamic-properties',
+			buttons:'/buttons'
 		}
 	},
 });

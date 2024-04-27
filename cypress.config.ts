@@ -45,7 +45,8 @@ export default defineConfig({
 		endpoint:{
 			dynamicProperties:'/dynamic-properties',
 			buttons:'/buttons',
-			RadioButtons:'/radio-button'
+			RadioButtons:'/radio-button',
+			uploadDownload: '/upload-download'
 		}
 	},
 });

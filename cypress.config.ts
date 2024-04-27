@@ -44,7 +44,8 @@ export default defineConfig({
 	env: {
 		endpoint:{
 			dynamicProperties:'/dynamic-properties',
-			buttons:'/buttons'
+			buttons:'/buttons',
+			RadioButtons:'/radio-button'
 		}
 	},
 });

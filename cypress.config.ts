@@ -46,7 +46,8 @@ export default defineConfig({
 			dynamicProperties:'/dynamic-properties',
 			buttons:'/buttons',
 			RadioButtons:'/radio-button',
-			uploadDownload: '/upload-download'
+			uploadDownload: '/upload-download',
+			textBox: '/text-box'
 		}
 	},
 });

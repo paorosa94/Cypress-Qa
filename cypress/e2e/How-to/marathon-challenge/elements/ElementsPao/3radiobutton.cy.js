@@ -1,9 +1,9 @@
-import { radiobuttons } from '../../../../../support/pages/Elements/3RadioButtons.Page';
-// import { data } from '../../../../../fixtures/data/3RadioButtons.json';
+import { radiobuttons } from '../../../support/pages/3RadioButtons.Page';
+import data from '../../../fixtures/3RadioButtons.json';
 
-const Yes ='Yes';
+/*const Yes ='Yes';
 const Impressive='Impressive';
-const textMessage = 'You have selected';
+const textMessage = 'You have selected';*/
 
 const { RadioButtons }=Cypress.env('endpoint');
 
@@ -15,17 +15,17 @@ describe('ToolsQA | Elements | Radio Buttons',() => {
 	it('Validate do radio buttons Yes and should displayed a message', () => {
 
 		cy.step('Get element Yes');
-		radiobuttons.ElementRadio(Yes).then(() => {
+		radiobuttons.ElementRadio(data.select).then(() => {
 			cy.step('Get element message and validate exist text');
-			radiobuttons.elementMessage().should('contain.text',`${textMessage } ${ Yes}`);
+			radiobuttons.elementMessage().should('contain.text',`${data.textMessage} ${data.select}`);
 
 		});
 	});
 	 it('Validate do radio buttons Impressive and should displayed a message', () => {
 		cy.step('Get element Impressive');
-		radiobuttons.ElementRadio(Impressive).then(() => {
+		radiobuttons.ElementRadio(data.selectOne).then(() => {
 			cy.step('Get element message and validate exist text');
-			radiobuttons.elementMessage().should('have.text',`${textMessage } ${ Impressive}`);
+			radiobuttons.elementMessage().should('have.text',`${data.textMessage} ${data.selectOne}`);
 
 		});
 	});

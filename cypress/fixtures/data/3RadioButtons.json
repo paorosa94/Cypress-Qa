@@ -1,3 +1,6 @@
 {
-	"select": "You have selected"
+	"select": "Yes",
+	"selectOne": "Impressive",
+	"selectTwo": "No",
+	"textMessage": "You have selected"
 }

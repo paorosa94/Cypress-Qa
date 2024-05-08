@@ -47,7 +47,8 @@ export default defineConfig({
 			buttons:'/buttons',
 			RadioButtons:'/radio-button',
 			uploadDownload: '/upload-download',
-			textBox: '/text-box'
+			textBox: '/text-box',
+			checkBox:'checkbox'
 		}
 	},
 });

@@ -1,0 +1,11 @@
+{
+	"dataInvalid": {
+		"NotContain@": "pao.rosa944gmail.com",
+		"NotInclude1": "@gmail.com",
+		"NotContain": {
+			"CharacterAfther{": "pao.rosa@",
+			"PuntoAfther": "paorosa@gmailcom",
+			"2CharacterAftherPunt": "paorosa@gmail.c"
+		}
+	}
+}

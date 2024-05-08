@@ -5,11 +5,13 @@ class Form {
 		currentAddress:() => cy.get('#currentAddress'),
 		permanentAddress:() => cy.get('textarea#permanentAddress'),
 		submit:() => cy.get('.mt-2'),
-		// parrafo
+		// parrafo+
 		//name and permanent
 		paragraph:() => cy.get('#output'),
 		paragraphEmail:() => cy.get('#email'),
-		paragraphCurrent:() => cy.get('p#currentAddress')
+		paragraphCurrent:() => cy.get('p#currentAddress'),
+		//tcs invalidos email
+		emailRedInvalid:() => cy.get('#userEmail')
 
 	};
 	enterfullName(name) {
@@ -53,8 +55,9 @@ class Form {
 	emptyPermanentAddress() {
 		return this.get.permanentAddress();
 	}
-	redCss() {
-		return this.get.email();
+	//Para validar tcs invalidos del campo email
+	enterEmailInvalid(email) {
+		return this.get.emailRedInvalid().type(email);
 	}
 }
 export const form = new Form();

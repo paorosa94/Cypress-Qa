@@ -10,6 +10,7 @@ describe('ToolsQA | Elements | Upload and Download',function () {
 	it('TC1:Validate should The "download" button is selected.', () => {
 		cy.step('get selector and invoke atrr for validated exist file');
 		uploadownload.fileDownload().as('getDownload');
+		// se invova el atrr download su valor se guardara en una varible
 		cy.get('@getDownload').invoke('attr','download').then(name => {
 			cy.log(name);
 			uploadownload.fileDownload().click();

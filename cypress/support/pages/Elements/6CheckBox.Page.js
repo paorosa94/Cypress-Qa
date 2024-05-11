@@ -6,7 +6,8 @@ class CheckBox {
 		checkBox:() => cy.get('[type=checkbox]'),
 		//items
 		hasClass:() => cy.get('[for^="tree-node"]:has(.rct-title)'),
-		hasIdClass:() => cy.get('#result .text-success')
+		hasIdClass:() => cy.get('#result .text-success'),
+		hasTitle:() => cy.get('[for^="tree-node"]:has(.rct-icon-check) .rct-title')
 
 	};
 	ValidHome() {
@@ -24,11 +25,14 @@ class CheckBox {
 	getIdClass() {
 		return	this.get.hasIdClass();
 	}
+	getClassTitle() {
+		return this.get.hasTitle();
+	}
 	TypeCheckBox(item)
 	{
 		return this.get.checkBox().eq(item);
 	}
-	TypeCheckBox2()
+	TypeCheck()
 	{
 		return this.get.checkBox();
 	}
